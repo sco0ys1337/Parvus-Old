@@ -22,12 +22,12 @@ end
 
 local function GetScript(Script)
     return Parvus.Debug and readfile("Parvus/" .. Script .. ".lua")
-    or game:HttpGetAsync("https://raw.githubusercontent.com/LucasLServices572/Parvus/main/Loader.lua" .. Script .. ".lua")
+    or game:HttpGetAsync("https://raw.githubusercontent.com/LucasLServices572/Parvus/main/" .. Script .. ".lua")
 end
 
 local function LoadScript(Script)
     return loadstring(Parvus.Debug and readfile("Parvus/" .. Script .. ".lua")
-    or game:HttpGetAsync("https://raw.githubusercontent.com/LucasLServices572/Parvus/main/Loader.lua" .. Script .. ".lua"))()
+    or game:HttpGetAsync("https://raw.githubusercontent.com/LucasLServices572/Parvus/main/" .. Script .. ".lua"))()
 end
 
 getgenv().Parvus = {
